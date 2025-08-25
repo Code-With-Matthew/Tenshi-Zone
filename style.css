@@ -19,7 +19,7 @@ header::after {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, rgba(255,215,0,0.5), #32CD32, rgba(255,215,0,0.5));
-  clip-path: polygon(2% 0, 98% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
 }
 
 h1, h2, h3, h4, h5, h6, .font-orbitron {
