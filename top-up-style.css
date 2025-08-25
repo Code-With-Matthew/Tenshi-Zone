@@ -1,0 +1,48 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0D0D0D;
+  color: #E0E0E0;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.card-bg {
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(50, 205, 50, 0.3);
+}
+
+.input-field {
+  background-color: #1A1A1A;
+  border: 1px solid #333;
+  color: #E0E0E0;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #32CD32;
+  box-shadow: 0 0 10px #32CD32;
+}
+
+.selectable-card {
+  background-color: #1A1A1A;
+  border: 2px solid #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.selectable-card.selected {
+  border-color: #32CD32;
+  background-color: rgba(50, 205, 50, 0.1);
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #32CD32, #228B22);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #32CD32;
+}

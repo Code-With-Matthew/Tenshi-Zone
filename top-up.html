@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Top Up - TenshiZone</title>
+
+    <!-- My Script -->
+    <script src="top-up-script.js"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="top-up-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/0D0D0D/FFFFFF?text=TZ" onerror="this.onerror=null;this.src='https://placehold.co/32x32/0D0D0D/FFFFFF?text=TZ';">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Orbitron & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Header (Sama seperti di index.html) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 border-b border-lime-500/30">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/0D0D0D/FFFFFF?text=TZ" alt="TenshiZone Logo" class="h-10 w-10 rounded-full border-2 border-lime-500">
+                <span class="text-2xl font-orbitron font-bold text-white">Tenshi<span class="text-lime-400">Zone</span></span>
+            </a>
+            <a href="index.html" class="text-white hover:text-lime-400 transition">&larr; Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <!-- Kolom Kiri: Info Game -->
+            <div class="lg:col-span-1">
+                <div class="card-bg p-6 rounded-lg sticky top-28">
+                    <img id="game-cover" src="https://placehold.co/400x400/1A1A1A/FFFFFF?text=Game" alt="Game Cover" class="rounded-lg mb-4 w-full">
+                    <h2 id="game-title" class="text-3xl font-orbitron font-bold text-white">Nama Game</h2>
+                    <p id="game-publisher" class="text-lime-400 mb-4">Publisher</p>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Top up Diamond ML hanya dalam hitungan detik! Cukup masukan User ID & Server MLBB Anda, pilih jumlah Diamond yang Anda inginkan, selesaikan pembayaran, dan Diamond akan langsung masuk ke akun Mobile Legends Anda.
+                    </p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-lime-400"></i><span>Pembayaran Aman & Terpercaya</span></div>
+                        <div class="flex items-center gap-3"><i data-lucide="zap" class="w-5 h-5 text-lime-400"></i><span>Proses Kilat & Instan</span></div>
+                        <div class="flex items-center gap-3"><i data-lucide="headphones" class="w-5 h-5 text-lime-400"></i><span>Layanan Pelanggan 24/7</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Form Top Up -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- 1. Informasi Pelanggan -->
+                <div class="card-bg p-6 rounded-lg">
+                    <h3 class="font-orbitron text-xl font-bold mb-4 flex items-center gap-2"><div class="w-2 h-6 bg-lime-400"></div>Lengkapi Data Anda</h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Masukkan User ID" class="input-field w-full p-3 rounded-lg">
+                        <input type="text" placeholder="Masukkan Server ID" class="input-field w-full p-3 rounded-lg">
+                    </div>
+                </div>
+
+                <!-- 2. Pilih Nominal Top Up -->
+                <div class="card-bg p-6 rounded-lg">
+                    <h3 class="font-orbitron text-xl font-bold mb-4 flex items-center gap-2"><div class="w-2 h-6 bg-lime-400"></div>Pilih Nominal Top Up</h3>
+                    <div id="denominations-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Nominal akan diisi oleh JavaScript -->
+                    </div>
+                </div>
+
+                <!-- 3. Pilih Metode Pembayaran -->
+                <div class="card-bg p-6 rounded-lg">
+                    <h3 class="font-orbitron text-xl font-bold mb-4 flex items-center gap-2"><div class="w-2 h-6 bg-lime-400"></div>Pilih Pembayaran</h3>
+                    <div id="payment-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Contoh Metode Pembayaran -->
+                        <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
+                            <img src="img/Logo_DANA.png" class="h-8 mb-2">
+                        </div>
+                        <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
+                            <img src="img/Logo GoPay.png" class="h-8 mb-2">
+                        </div>
+                        <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
+                            <img src="img/Logo OVO.jpg" class="h-8 mb-2">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tombol Beli -->
+                <button class="btn-primary w-full text-white font-bold py-4 px-8 rounded-lg text-lg">
+                    Beli Sekarang
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

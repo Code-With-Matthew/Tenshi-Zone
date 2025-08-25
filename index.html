@@ -20,49 +20,8 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0D0D0D; 
-            color: #E0E0E0; 
-        }
-        h1, h2, h3, h4, h5, h6, .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        .glow-green {
-            box-shadow: 0 0 5px #32CD32, 0 0 15px #32CD32, 0 0 25px #32CD32;
-        }
-        .glow-yellow {
-            box-shadow: 0 0 5px #FFD700, 0 0 15px #FFD700, 0 0 25px #FFD700;
-        }
-        .btn-primary {
-            background: linear-gradient(90deg, #32CD32, #228B22);
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px #32CD32;
-        }
-        .btn-secondary {
-            background: linear-gradient(90deg, #FFD700, #DAA520);
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px #FFD700;
-        }
-        .card-bg {
-            background-color: rgba(26, 26, 26, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(50, 205, 50, 0.3);
-        }
-        .hero-bg {
-            background-image: url('/img/BG.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-    </style>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="overflow-x-hidden">
 
@@ -141,47 +100,51 @@
                     Popular <span class="text-lime-400">Games</span>
                 </h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    <!-- Game Card -->
-                    <div class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                        <img src="img/Valorant Cover.jpg" alt="Game 1" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1A1A1A/FFFFFF?text=Game+1';">
+                    <!-- Game Card: Valorant -->
+                    <a href="top-up.html?game=valorant" class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group block">
+                        <img src="img/Valorant Cover.jpg" alt="Valorant" class="w-full h-48 object-cover">
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-lg text-white">Valorant</h3>
                             <p class="text-sm text-gray-400">Riot Games</p>
-                            <button class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</button>
+                            <div class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</div>
                         </div>
-                    </div>
-                    <div class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                        <img src="img/ML Cover.jpg" alt="Game 2" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1A1A1A/FFFFFF?text=Game+2';">
+                    </a>
+                    <!-- Game Card: Mobile Legends -->
+                    <a href="top-up.html?game=mobile-legends" class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group block">
+                        <img src="img/ML Cover.jpg" alt="Mobile Legends" class="w-full h-48 object-cover">
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-lg text-white">Mobile Legends</h3>
                             <p class="text-sm text-gray-400">Moonton</p>
-                            <button class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</button>
+                            <div class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</div>
                         </div>
-                    </div>
-                    <div class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                        <img src="img/GI Cover.jpg" alt="Game 3" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1A1A1A/FFFFFF?text=Game+3';">
+                    </a>
+                    <!-- Game Card: Genshin Impact -->
+                    <a href="top-up.html?game=genshin-impact" class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group block">
+                        <img src="img/GI Cover.jpg" alt="Genshin Impact" class="w-full h-48 object-cover">
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-lg text-white">Genshin Impact</h3>
                             <p class="text-sm text-gray-400">HoYoverse</p>
-                            <button class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</button>
+                            <div class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</div>
                         </div>
-                    </div>
-                    <div class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                        <img src="img/PUBGM Cover.jpg" alt="Game 4" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1A1A1A/FFFFFF?text=Game+4';">
+                    </a>
+                    <!-- Game Card: PUBG Mobile -->
+                    <a href="top-up.html?game=pubg-mobile" class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group block">
+                        <img src="img/PUBGM Cover.jpg" alt="PUBG Mobile" class="w-full h-48 object-cover">
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-lg text-white">PUBG Mobile</h3>
                             <p class="text-sm text-gray-400">Tencent Games</p>
-                            <button class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</button>
+                            <div class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</div>
                         </div>
-                    </div>
-                    <div class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                        <img src="img/FF Cover.jpg" alt="Game 5" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1A1A1A/FFFFFF?text=Game+5';">
+                    </a>
+                    <!-- Game Card: Free Fire -->
+                    <a href="top-up.html?game=free-fire" class="card-bg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 group block">
+                        <img src="img/FF Cover.jpg" alt="Free Fire" class="w-full h-48 object-cover">
                         <div class="p-4 text-center">
                             <h3 class="font-bold text-lg text-white">Free Fire</h3>
                             <p class="text-sm text-gray-400">Garena</p>
-                            <button class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</button>
+                            <div class="mt-4 w-full bg-lime-500/20 text-lime-400 border border-lime-500 rounded-lg py-2 px-4 group-hover:bg-lime-500 group-hover:text-black transition">Top Up</div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
