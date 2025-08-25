@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Top Up - TenshiZone</title>
 
-    <!-- My Script -->
-    <script src="top-up-script.js"></script>
-
-    <!-- My CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="top-up-style.css">
+
+    <!-- Script -->
+    <script src="top-up-script.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://placehold.co/32x32/0D0D0D/FFFFFF?text=TZ" onerror="this.onerror=null;this.src='https://placehold.co/32x32/0D0D0D/FFFFFF?text=TZ';">
@@ -48,8 +48,8 @@
                     <img id="game-cover" src="https://placehold.co/400x400/1A1A1A/FFFFFF?text=Game" alt="Game Cover" class="rounded-lg mb-4 w-full">
                     <h2 id="game-title" class="text-3xl font-orbitron font-bold text-white">Nama Game</h2>
                     <p id="game-publisher" class="text-lime-400 mb-4">Publisher</p>
-                    <p class="text-gray-400 text-sm mb-6">
-                        Top up Diamond ML hanya dalam hitungan detik! Cukup masukan User ID & Server MLBB Anda, pilih jumlah Diamond yang Anda inginkan, selesaikan pembayaran, dan Diamond akan langsung masuk ke akun Mobile Legends Anda.
+                    <p id="game-description" class="text-gray-400 text-sm mb-6">
+                        <!-- Deskripsi akan diisi oleh JavaScript -->
                     </p>
                     <div class="space-y-3 text-sm">
                         <div class="flex items-center gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-lime-400"></i><span>Pembayaran Aman & Terpercaya</span></div>
@@ -66,7 +66,7 @@
                     <h3 class="font-orbitron text-xl font-bold mb-4 flex items-center gap-2"><div class="w-2 h-6 bg-lime-400"></div>Lengkapi Data Anda</h3>
                     <div class="grid sm:grid-cols-2 gap-4">
                         <input type="text" placeholder="Masukkan User ID" class="input-field w-full p-3 rounded-lg">
-                        <input type="text" placeholder="Masukkan Server ID" class="input-field w-full p-3 rounded-lg">
+                        <input type="text" placeholder="Masukkan Server ID (jika ada)" class="input-field w-full p-3 rounded-lg">
                     </div>
                 </div>
 
@@ -74,7 +74,6 @@
                 <div class="card-bg p-6 rounded-lg">
                     <h3 class="font-orbitron text-xl font-bold mb-4 flex items-center gap-2"><div class="w-2 h-6 bg-lime-400"></div>Pilih Nominal Top Up</h3>
                     <div id="denominations-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <!-- Nominal akan diisi oleh JavaScript -->
                     </div>
                 </div>
 
@@ -84,13 +83,16 @@
                     <div id="payment-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <!-- Contoh Metode Pembayaran -->
                         <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
-                            <img src="img/Logo_DANA.png" class="h-8 mb-2">
+                            <img src="https://placehold.co/100x40/FFFFFF/000000?text=DANA" class="h-8 mb-2">
+                            <p class="text-sm text-gray-400">Rp 15.000</p>
                         </div>
                         <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
-                            <img src="img/Logo GoPay.png" class="h-8 mb-2">
+                            <img src="https://placehold.co/100x40/FFFFFF/000000?text=GoPay" class="h-8 mb-2">
+                            <p class="text-sm text-gray-400">Rp 15.000</p>
                         </div>
                         <div class="selectable-card p-4 rounded-lg cursor-pointer flex flex-col items-center justify-center">
-                            <img src="img/Logo OVO.jpg" class="h-8 mb-2">
+                            <img src="https://placehold.co/100x40/FFFFFF/000000?text=OVO" class="h-8 mb-2">
+                            <p class="text-sm text-gray-400">Rp 15.000</p>
                         </div>
                     </div>
                 </div>
