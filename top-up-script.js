@@ -72,7 +72,35 @@ const gameData = {
       { amount: '355 Diamonds', price: 'Rp 50.000' },
       { amount: '720 Diamonds', price: 'Rp 100.000' },
     ]
-  }
+  },
+  'growtopia': {
+    title: 'Growtopia',
+    publisher: 'Ubisoft',
+    cover: 'https://placehold.co/300x400/1A1A1A/FFFFFF?text=Growtopia',
+    description: 'Buy Growtopia Diamond Locks easily! Just enter your GrowID, choose the number of DLS you want, and complete the payment to receive them in-game.',
+    currencyName: 'Diamond Locks',
+    currencyIcon: 'https://placehold.co/100x100/00BFFF/FFFFFF?text=DL',
+    denominations: [
+        { amount: '1', price: 'Rp 10.000' },
+        { amount: '5', price: 'Rp 48.000' },
+        { amount: '10', price: 'Rp 95.000' },
+        { amount: '20', price: 'Rp 185.000' },
+    ]
+              },
+  'roblox': {
+    title: 'Roblox',
+    publisher: 'Roblox Corporation',
+    cover: 'https://placehold.co/300x400/1A1A1A/FFFFFF?text=Roblox',
+    description: 'Top up Robux for Roblox here! Enter your username, select the amount, and get your Robux instantly to customize your avatar and access premium games.',
+    currencyName: 'Robux',
+    currencyIcon: 'https://placehold.co/100x100/CCCCCC/000000?text=R$',
+    denominations: [
+      { amount: '80', price: 'Rp 16.000' },
+      { amount: '400', price: 'Rp 79.000' },
+      { amount: '800', price: 'Rp 159.000' },
+      { amount: '1700', price: 'Rp 329.000' },
+    ]
+  },
 };
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
